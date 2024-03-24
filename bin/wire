@@ -1,0 +1,7 @@
+#!/usr/bin/env node
+
+// Require the wire CLI
+import cli from "../lib/cli.js";
+
+// Run the wire CLI
+cli();

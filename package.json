@@ -1,0 +1,18 @@
+{
+  "name": "@juanibiapina/wire",
+  "type": "module",
+  "version": "0.0.3",
+  "repository": "github:juanibiapina/wire",
+  "bin": {
+    "wire": "bin/wire"
+  },
+  "dependencies": {
+    "@jspm/generator": "^2.0.1",
+    "@swc/core": "^1.4.8",
+    "commander": "^12.0.0",
+    "ejs": "^3.1.9",
+    "express": "^4.19.1",
+    "glob": "^10.3.10"
+  },
+  "license": "MIT"
+}
