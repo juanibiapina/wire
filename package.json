@@ -6,6 +6,9 @@
   "bin": {
     "wire": "bin/wire"
   },
+  "scripts": {
+    "test": "node --test"
+  },
   "dependencies": {
     "@jspm/generator": "^2.0.1",
     "@swc/core": "^1.4.8",
