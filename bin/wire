@@ -1,7 +1,10 @@
 #!/usr/bin/env node
 
 // Require the wire CLI
-import cli from "../lib/cli.js";
+import { makeCli } from "../lib/cli.js";
+
+// Create a new CLI instance
+const cli = makeCli();
 
 // Run the wire CLI
 cli();
