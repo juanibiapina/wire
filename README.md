@@ -59,3 +59,8 @@ helper function in .html.ejs files:
 ```
 
 This will include the `application.js` file compiled from `application.tsx`.
+
+### Public files
+
+All files in the `src/public` directory are copied to the output directory's
+`public` directory.
