@@ -35,6 +35,17 @@ HTML lives in `src/html`. Files are named `:name.html.ejs`, with a special
 Wire uses EJS for adapting the generated HTML to the environment. Helpers are
 available for common tasks.
 
+### CSS
+
+CSS lives in `src/css`. Files are named `:name.css`. They can be included in
+HTML files using the `stylesheetLinkTag` helper function in .html.ejs files:
+
+```eruby
+<%- stylesheetLinkTag("application") %>
+```
+
+This will include the `application.css` file.
+
 ### TypeScript
 
 Typescript files live in `src/typescript`. Files are named `:name.tsx`. JSX is
