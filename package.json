@@ -6,6 +6,11 @@
   "bin": {
     "wire": "bin/wire"
   },
+  "files": [
+    "bin",
+    "lib",
+    "template"
+  ],
   "scripts": {
     "test": "node --test"
   },
