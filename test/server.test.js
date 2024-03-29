@@ -58,12 +58,25 @@ describe('server', async () => {
       const server = makeServer({ workingDir: './fixtures/source' });
 
       // when
-      const response = await request(server).get('/application.css');
+      const response = await request(server).get('/css/application.css');
 
       // then
       assert.strictEqual(response.status, 200);
       assert.ok(response.headers['content-type'].includes('text/css'));
       assert.ok(response.text.includes('box-shadow'));
+    });
+
+    it('serves css files from subdirectories of src/css', async () => {
+      // given
+      const server = makeServer({ workingDir: './fixtures/source' });
+
+      // when
+      const response = await request(server).get('/css/cssmodule1/main.css');
+
+      // then
+      assert.strictEqual(response.status, 200);
+      assert.ok(response.headers['content-type'].includes('text/css'));
+      assert.ok(response.text.includes('.module1'));
     });
   });
 });
