@@ -64,3 +64,11 @@ This will include the `application.js` file compiled from `application.tsx`.
 
 All files in the `src/public` directory are copied to the output directory's
 `public` directory.
+
+## EJS helpers
+
+- importMapScriptTag(): Include the import map script tag.
+- scriptModuleTag(name): Include a script tag for JS module defined by `src/typescript/:name.tsx`.
+- stylesheetLinkTag(name): Include a link tag for CSS file defined by `src/css/:name.css`.
+- includeCSSDirectory(name): Include all CSS files in the `src/css/:name` directory.
+- production: True if the environment is production.
