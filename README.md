@@ -7,6 +7,13 @@ possible.
 This is experimental software. It can technically be used in production but it
 doesn't cover many use cases and needs polishing.
 
+## Features
+
+- Supports HTML + EJS, CSS and TypeScript.
+- Dev server for local development
+- Optimized production builds using [SWC](https://swc.rs).
+- Supports [Import Maps](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script/type/importmap).
+
 ## Installation
 
 Install wire as a development dependency in your project:
