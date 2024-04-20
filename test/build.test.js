@@ -31,4 +31,26 @@ describe('build', async () => {
       assert.strictEqual(await fs.readFile(compiledFile, 'utf8'), await fs.readFile(expectedFile, 'utf8'));
     }
   });
+
+  it('builds a project without an importmap', async () => {
+    // given
+    const targetDir = await fs.mkdtemp(path.join(os.tmpdir(), 'wire-test-'));
+
+    // when
+    await build({
+      workingDir: "./fixtures/source-noimportmap",
+      targetDir: targetDir,
+    });
+
+    // then
+    const expectedFiles = await glob(path.join('./fixtures/target-noimportmap/**/*'), { nodir: true });
+
+    for await (const expectedFile of expectedFiles) {
+      const relativePath = path.relative("./fixtures/target-noimportmap", expectedFile);
+      const compiledFile = path.join(targetDir, relativePath);
+
+      assert.ok(await fs.stat(compiledFile));
+      assert.strictEqual(await fs.readFile(compiledFile, 'utf8'), await fs.readFile(expectedFile, 'utf8'));
+    }
+  });
 });
