@@ -1,7 +1,7 @@
 {
   "name": "@juanibiapina/wire",
   "type": "module",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "repository": "github:juanibiapina/wire",
   "bin": {
     "wire": "bin/wire"
